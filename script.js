@@ -1,6 +1,12 @@
-/* Vidants Logistics — Landing Page Scripts */
+/* Vidants Logistics LLC — Site Scripts */
 
-// Mobile navigation toggle
+// ── NAVBAR SCROLL ────────────────────────────────────────────
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// ── MOBILE MENU ──────────────────────────────────────────────
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('navLinks');
 
@@ -9,7 +15,7 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 });
 
-// Close mobile menu when a nav link is clicked
+// Close on nav link click
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('open');
@@ -17,48 +23,50 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-// Sticky nav shadow on scroll
-const navHeader = document.querySelector('.nav-header');
-window.addEventListener('scroll', () => {
-  navHeader.style.boxShadow = window.scrollY > 10
-    ? '0 4px 24px rgba(15,23,42,.12)'
-    : 'none';
-}, { passive: true });
-
-// Scroll-reveal animation
-const revealEls = document.querySelectorAll(
-  '.service-card, .step, .testimonial-card, .visual-card, .feature-list li'
-);
-
-const observer = new IntersectionObserver((entries) => {
+// ── SCROLL REVEAL ────────────────────────────────────────────
+const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-      observer.unobserve(entry.target);
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.12 });
 
-revealEls.forEach((el, i) => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = `opacity .5s ease ${i * 0.06}s, transform .5s ease ${i * 0.06}s`;
-  observer.observe(el);
-});
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// Contact form — simple client-side handling
+// ── QUOTE FORM ───────────────────────────────────────────────
 const form = document.getElementById('quoteForm');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const btn = form.querySelector('button[type="submit"]');
-  btn.textContent = 'Sending…';
-  btn.disabled = true;
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.btn-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
 
-  setTimeout(() => {
-    btn.textContent = '✓ Request Sent! We\'ll be in touch soon.';
-    btn.style.background = '#16a34a';
-    btn.style.borderColor = '#16a34a';
-    form.reset();
-  }, 1200);
-});
+    // Simulate submission — replace with real endpoint as needed
+    setTimeout(() => {
+      btn.textContent = '✓ Request Sent — We\'ll be in touch soon!';
+      btn.style.background = '#16a34a';
+      btn.style.opacity = '1';
+      form.reset();
+    }, 1400);
+  });
+}
+
+// ── ACTIVE NAV LINK (scroll spy) ────────────────────────────
+const sections  = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navAnchors.forEach(a => a.style.color = '');
+      const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+      if (active) active.style.color = 'var(--orange)';
+    }
+  });
+}, { threshold: 0.35 });
+
+sections.forEach(s => sectionObserver.observe(s));

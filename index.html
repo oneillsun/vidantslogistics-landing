@@ -3,274 +3,325 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Vidants Logistics — Reliable freight, shipping, and supply chain solutions. Moving your business forward, every mile." />
-  <title>Vidants Logistics | Reliable Freight & Shipping Solutions</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Vidants Logistics LLC — Reliable, expert transportation and logistics solutions. Kentucky-based, nationwide reach. FTL, LTL, and supply chain coordination." />
+  <title>Vidants Logistics LLC – Moving America Forward</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- NAV -->
-  <header class="nav-header">
-    <div class="container nav-inner">
-      <a href="#" class="logo">
-        <span class="logo-icon">&#9650;</span>
-        <span>Vidants<strong>Logistics</strong></span>
-      </a>
-      <nav class="nav-links" id="navLinks">
-        <a href="#services">Services</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact" class="btn btn-outline">Get a Quote</a>
-      </nav>
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <div class="nav-hex">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 2 L44 13 L44 35 L24 46 L4 35 L4 13 Z" fill="#F26B1D"/>
+          <path d="M14 24 L20 18 L28 18 L28 30 L20 30 Z" fill="#0D1B2A"/>
+          <path d="M24 18 L34 24 L28 30" stroke="#0D1B2A" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+      <div>
+        <div class="nav-brand">VIDANTS <span>LOGISTICS</span></div>
+        <div class="nav-sub">LLC</div>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#process">How It Works</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#contact" class="nav-cta">Get a Quote</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
-  </header>
+  </nav>
 
   <!-- HERO -->
-  <section class="hero" id="home">
+  <section id="hero">
     <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <p class="hero-eyebrow">Trusted Logistics Partner</p>
-      <h1>Moving Your Business<br /><span class="highlight">Forward, Every Mile</span></h1>
-      <p class="hero-sub">End-to-end freight, warehousing, and supply chain solutions designed for businesses that can't afford delays.</p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary btn-lg">Get a Free Quote</a>
-        <a href="#services" class="btn btn-ghost btn-lg">Our Services</a>
+    <!-- Hex grid decoration -->
+    <div class="hex-grid" aria-hidden="true">
+      <svg viewBox="0 0 580 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="hexPat" x="0" y="0" width="69.28" height="80" patternUnits="userSpaceOnUse">
+            <path d="M34.64 5 L64.28 22.5 L64.28 57.5 L34.64 75 L5 57.5 L5 22.5 Z" stroke="rgba(242,107,29,1)" stroke-width="0.8" fill="none"/>
+          </pattern>
+        </defs>
+        <rect width="580" height="580" fill="url(#hexPat)"/>
+      </svg>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Kentucky-Based · Nationwide Reach</div>
+      <h1 class="hero-title">VIDANTS<br/><span class="accent">LOGISTICS</span></h1>
+      <div class="hero-tagline">Moving America Forward</div>
+      <p class="hero-desc">
+        Reliable, expert transportation and logistics solutions built for the modern supply chain. From regional hauls to long-haul freight — on time, every time.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Request a Quote</a>
+        <a href="#services" class="btn-secondary">Our Services</a>
       </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-num">10K+</span>
-          <span class="stat-label">Deliveries Completed</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">98%</span>
-          <span class="stat-label">On-Time Rate</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat">
-          <span class="stat-num">500+</span>
-          <span class="stat-label">Clients Served</span>
-        </div>
+    </div>
+    <!-- Stats bar -->
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">On-Time Commitment</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">48</div>
+        <div class="stat-label">States Served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Dispatch Support</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">LLC</div>
+        <div class="stat-label">Licensed &amp; Insured</div>
       </div>
     </div>
   </section>
 
   <!-- SERVICES -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">What We Offer</p>
-        <h2>Comprehensive Logistics Services</h2>
-        <p class="section-sub">From first mile to last mile — we handle every link in your supply chain with precision and care.</p>
+  <section id="services">
+    <div class="section-header reveal">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">OUR <span class="accent">SERVICES</span></h2>
+      <p class="section-desc">From single loads to complex supply chains — we move freight the right way.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <svg class="service-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="22" width="36" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M40 30 L50 30 L50 40 L40 40" stroke="currentColor" stroke-width="2"/>
+          <circle cx="14" cy="42" r="4" stroke="currentColor" stroke-width="2"/>
+          <circle cx="34" cy="42" r="4" stroke="currentColor" stroke-width="2"/>
+          <circle cx="46" cy="42" r="4" stroke="currentColor" stroke-width="2"/>
+          <path d="M4 22 L10 10 L36 10 L40 22" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <div class="service-name">Full Truckload (FTL)</div>
+        <p class="service-desc">Dedicated truck capacity for large shipments requiring the entire trailer. Maximum security, speed, and efficiency for your freight.</p>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">&#9992;</div>
-          <h3>Air Freight</h3>
-          <p>Time-critical shipments delivered fast. Our air freight network spans domestic and international routes with full tracking.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">&#128674;</div>
-          <h3>Ground Transport</h3>
-          <p>Full truckload, LTL, and dedicated fleet solutions for reliable overland delivery across the country.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">&#9875;</div>
-          <h3>Ocean Freight</h3>
-          <p>Cost-effective FCL and LCL ocean shipping with port-to-door service and customs clearance support.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">&#127970;</div>
-          <h3>Warehousing</h3>
-          <p>Secure, climate-controlled warehouses with inventory management, pick-and-pack, and same-day dispatch.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">&#128200;</div>
-          <h3>Supply Chain Consulting</h3>
-          <p>Optimize your logistics operations with data-driven insights and tailored supply chain strategy.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">&#128241;</div>
-          <h3>Real-Time Tracking</h3>
-          <p>Stay informed at every stage with our live tracking portal and automated shipment notifications.</p>
-        </div>
+
+      <div class="service-card reveal" style="transition-delay:.08s">
+        <div class="service-num">02</div>
+        <svg class="service-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="18" width="48" height="22" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M16 18 L16 10 L40 10 L40 18" stroke="currentColor" stroke-width="2"/>
+          <line x1="4" y1="28" x2="52" y2="28" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <circle cx="16" cy="42" r="4" stroke="currentColor" stroke-width="2"/>
+          <circle cx="40" cy="42" r="4" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <div class="service-name">Less Than Truckload (LTL)</div>
+        <p class="service-desc">Cost-effective freight solutions for smaller loads. Share trailer space without sacrificing reliability or delivery timelines.</p>
       </div>
+
+      <div class="service-card reveal" style="transition-delay:.16s">
+        <div class="service-num">03</div>
+        <svg class="service-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28 4 L52 18 L52 38 L28 52 L4 38 L4 18 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M28 4 L28 52 M4 18 L52 38 M52 18 L4 38" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/>
+        </svg>
+        <div class="service-name">Logistics Coordination</div>
+        <p class="service-desc">End-to-end supply chain management and route optimization. We handle the complexity so your cargo moves without friction.</p>
+      </div>
+
+      <div class="service-card reveal" style="transition-delay:.08s">
+        <div class="service-num">04</div>
+        <svg class="service-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="24" r="12" stroke="currentColor" stroke-width="2"/>
+          <path d="M16 40 C16 32 40 32 40 40" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 20 L12 20 M44 20 L48 20 M28 8 L28 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M24 24 L28 20 L32 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div class="service-name">Owner-Operator Network</div>
+        <p class="service-desc">Partnering with professional owner-operators to extend our reach and capacity. Reliable drivers, vetted and ready to roll.</p>
+      </div>
+
+      <div class="service-card reveal" style="transition-delay:.16s">
+        <div class="service-num">05</div>
+        <svg class="service-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="8" width="40" height="32" rx="2" stroke="currentColor" stroke-width="2"/>
+          <path d="M8 20 L48 20" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M18 40 L18 48 M38 40 L38 48 M12 48 L44 48" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M18 30 L24 26 L30 30 L36 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="service-name">Real-Time Tracking</div>
+        <p class="service-desc">Full visibility into your shipment's journey. Live updates, proactive communication, and complete transparency from pickup to delivery.</p>
+      </div>
+
+      <div class="service-card reveal" style="transition-delay:.24s">
+        <div class="service-num">06</div>
+        <svg class="service-icon" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28 6 L36 14 L48 14 L48 42 L8 42 L8 14 L20 14 Z" stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M20 14 L28 6 L36 14" stroke="currentColor" stroke-width="2"/>
+          <path d="M18 26 L24 32 L38 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="service-name">Compliance &amp; DOT Ready</div>
+        <p class="service-desc">Fully licensed with USDOT and MC numbers. Every load moves in full regulatory compliance — your peace of mind is our priority.</p>
+      </div>
+
     </div>
   </section>
 
   <!-- WHY US -->
-  <section class="why-us" id="why-us">
-    <div class="container why-us-inner">
-      <div class="why-us-text">
-        <p class="section-eyebrow">Why Vidants</p>
-        <h2>Logistics Built Around Your Business</h2>
-        <p>We're not a one-size-fits-all carrier. Every client gets a dedicated account manager, a custom logistics plan, and 24/7 support — because your cargo is our responsibility.</p>
-        <ul class="feature-list">
-          <li>
-            <span class="check">&#10003;</span>
-            <div>
-              <strong>Dedicated Account Managers</strong>
-              <p>A single point of contact who knows your business and your shipments.</p>
-            </div>
-          </li>
-          <li>
-            <span class="check">&#10003;</span>
-            <div>
-              <strong>24/7 Customer Support</strong>
-              <p>Round-the-clock assistance via phone, email, or live chat — whenever you need us.</p>
-            </div>
-          </li>
-          <li>
-            <span class="check">&#10003;</span>
-            <div>
-              <strong>Transparent Pricing</strong>
-              <p>No hidden fees. Clear quotes, detailed invoices, and competitive rates every time.</p>
-            </div>
-          </li>
-          <li>
-            <span class="check">&#10003;</span>
-            <div>
-              <strong>Vetted Carrier Network</strong>
-              <p>Every partner in our network meets strict safety, insurance, and compliance standards.</p>
-            </div>
-          </li>
-        </ul>
+  <section id="why">
+    <div class="why-layout">
+      <div class="why-visual reveal" aria-hidden="true">
+        <div class="why-hex-ring">
+          <div class="why-dot"></div>
+        </div>
+        <div class="why-hex-ring why-hex-ring-2"></div>
+        <div class="why-hex-main">
+          <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M130 10 L240 70 L240 190 L130 250 L20 190 L20 70 Z" fill="rgba(242,107,29,0.08)" stroke="#F26B1D" stroke-width="1.5"/>
+            <path d="M130 40 L210 85 L210 175 L130 220 L50 175 L50 85 Z" fill="rgba(242,107,29,0.05)" stroke="rgba(242,107,29,0.3)" stroke-width="1"/>
+            <path d="M130 70 L180 100 L180 160 L130 190 L80 160 L80 100 Z" fill="rgba(242,107,29,0.1)" stroke="rgba(242,107,29,0.5)" stroke-width="1.5"/>
+            <path d="M96 118 L134 118 L134 146 L96 146 Z" fill="none" stroke="#F26B1D" stroke-width="2"/>
+            <path d="M134 126 L152 126 L152 146 L134 146" stroke="#F26B1D" stroke-width="2" fill="none"/>
+            <circle cx="106" cy="148" r="5" stroke="#F26B1D" stroke-width="2"/>
+            <circle cx="142" cy="148" r="5" stroke="#F26B1D" stroke-width="2"/>
+            <path d="M96 118 L104 106 L134 106 L134 118" stroke="#F26B1D" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
       </div>
-      <div class="why-us-visual">
-        <div class="visual-card vc1">
-          <span class="vc-icon">&#128338;</span>
-          <strong>98% On-Time</strong>
-          <p>Delivery Rate</p>
+
+      <div class="why-text">
+        <div class="section-header reveal">
+          <div class="section-label">Why Vidants</div>
+          <h2 class="section-title">BUILT ON<br/><span class="accent">RELIABILITY</span></h2>
         </div>
-        <div class="visual-card vc2">
-          <span class="vc-icon">&#127760;</span>
-          <strong>50+ Countries</strong>
-          <p>Global Reach</p>
-        </div>
-        <div class="visual-card vc3">
-          <span class="vc-icon">&#128274;</span>
-          <strong>Fully Insured</strong>
-          <p>Every Shipment</p>
-        </div>
-        <div class="visual-card vc4">
-          <span class="vc-icon">&#9889;</span>
-          <strong>Same-Day</strong>
-          <p>Quote Response</p>
+        <div class="why-features">
+          <div class="feature-row reveal">
+            <div class="feature-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>On-Time, Every Time</h4>
+              <p>We understand that in logistics, time is money. Our routes are optimized, our drivers are professional, and our commitment to your deadlines is absolute.</p>
+            </div>
+          </div>
+          <div class="feature-row reveal" style="transition-delay:.1s">
+            <div class="feature-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Fully Licensed &amp; Insured</h4>
+              <p>Operating with active USDOT and MC authority. Every shipment is protected with comprehensive cargo insurance so you can move freight with total confidence.</p>
+            </div>
+          </div>
+          <div class="feature-row reveal" style="transition-delay:.2s">
+            <div class="feature-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>24/7 Support &amp; Communication</h4>
+              <p>Our team is always reachable. Real people, real answers — not automated runarounds. We stay in contact from the moment your freight is picked up.</p>
+            </div>
+          </div>
+          <div class="feature-row reveal" style="transition-delay:.3s">
+            <div class="feature-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Competitive, Transparent Pricing</h4>
+              <p>No hidden fees, no surprises. We provide clear, upfront quotes so you know exactly what you're paying — and what you're getting in return.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="how-it-works" id="how-it-works">
+  <section id="process">
     <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Simple Process</p>
-        <h2>How It Works</h2>
-        <p class="section-sub">Getting started with Vidants Logistics is fast and straightforward. From quote to delivery in four easy steps.</p>
+      <div class="section-header reveal" style="text-align:center; max-width:600px; margin:0 auto 72px;">
+        <div class="section-label" style="justify-content:center;">Simple Process</div>
+        <h2 class="section-title">HOW IT <span class="accent">WORKS</span></h2>
+        <p class="section-desc" style="margin-top:16px;">Getting started is fast. From your first call to final delivery in four straightforward steps.</p>
       </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="process-num">01</div>
+          <div class="process-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.79 19.79 19.79 0 01.48 2.18 2 2 0 012.46 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.5a16 16 0 006.59 6.59l.76-.76a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
           <h3>Request a Quote</h3>
-          <p>Fill out our simple form with your shipment details. We'll respond with a competitive quote within hours.</p>
+          <p>Contact us with your shipment details — origin, destination, load type, and timeline. We'll respond fast.</p>
         </div>
-        <div class="step-arrow">&#8594;</div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <h3>Plan & Schedule</h3>
-          <p>Your dedicated account manager crafts a logistics plan and schedules pickup at your convenience.</p>
+        <div class="process-arrow" aria-hidden="true">&#8594;</div>
+        <div class="process-step reveal" style="transition-delay:.1s">
+          <div class="process-num">02</div>
+          <div class="process-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3>Plan &amp; Schedule</h3>
+          <p>We coordinate pickup, assign a vetted driver, and confirm your delivery window — no loose ends.</p>
         </div>
-        <div class="step-arrow">&#8594;</div>
-        <div class="step">
-          <div class="step-num">03</div>
+        <div class="process-arrow" aria-hidden="true">&#8594;</div>
+        <div class="process-step reveal" style="transition-delay:.2s">
+          <div class="process-num">03</div>
+          <div class="process-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
           <h3>Track in Real Time</h3>
-          <p>Monitor your shipment live via our tracking portal. Receive automated updates at every milestone.</p>
+          <p>Monitor your freight live. Our team provides proactive updates and is reachable 24/7 throughout transit.</p>
         </div>
-        <div class="step-arrow">&#8594;</div>
-        <div class="step">
-          <div class="step-num">04</div>
+        <div class="process-arrow" aria-hidden="true">&#8594;</div>
+        <div class="process-step reveal" style="transition-delay:.3s">
+          <div class="process-num">04</div>
+          <div class="process-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
           <h3>Delivered on Time</h3>
-          <p>Your cargo arrives safely and on schedule. We follow up to ensure complete satisfaction.</p>
+          <p>Your cargo arrives safely, on schedule. We follow up to confirm satisfaction and stand ready for your next load.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Client Stories</p>
-        <h2>Trusted by Businesses Across Industries</h2>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Vidants Logistics transformed our supply chain. We cut shipping costs by 20% and our on-time delivery jumped to near-perfect. Their team is proactive and genuinely cares."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">MR</div>
-            <div>
-              <strong>Marcus R.</strong>
-              <span>Operations Director, RetailCore Inc.</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card testimonial-featured">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"We've worked with several logistics providers, but Vidants stands apart. Real-time tracking, transparent pricing, and a team that actually answers the phone. Best decision we made."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">SL</div>
-            <div>
-              <strong>Sophia L.</strong>
-              <span>CEO, NovaMed Supplies</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Fast quotes, no surprises on the invoice, and the freight always arrives on time. Vidants has been our go-to partner for three years running."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">JT</div>
-            <div>
-              <strong>James T.</strong>
-              <span>Logistics Manager, BrightBuilt Co.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- CTA BAND -->
+  <section id="cta">
+    <h2 class="cta-title reveal">READY TO MOVE<br/>FORWARD?</h2>
+    <p class="cta-sub reveal">Let's talk about your freight needs. We'll build a solution that works.</p>
+    <a href="#contact" class="btn-dark reveal">Contact Us Today</a>
   </section>
 
-  <!-- CONTACT / CTA -->
-  <section class="contact" id="contact">
-    <div class="container contact-inner">
-      <div class="contact-text">
-        <p class="section-eyebrow light">Get Started</p>
-        <h2>Ready to Ship Smarter?</h2>
-        <p>Tell us about your shipment and we'll get back to you with a custom quote — same business day.</p>
-        <div class="contact-info">
-          <div class="contact-item">
-            <span>&#128222;</span>
-            <span>+1 (800) 555-0192</span>
-          </div>
-          <div class="contact-item">
-            <span>&#9993;</span>
-            <span>hello@vidantslogistics.com</span>
-          </div>
-          <div class="contact-item">
-            <span>&#128205;</span>
-            <span>123 Commerce Drive, Chicago, IL 60601</span>
-          </div>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-wrap">
+      <div class="section-label reveal" style="justify-content:center;">Get In Touch</div>
+      <h2 class="section-title reveal" style="text-align:center; margin-bottom:16px;">LET'S <span class="accent">CONNECT</span></h2>
+      <p class="reveal contact-intro">Whether you need a one-time haul or a long-term logistics partner, Vidants Logistics is ready to serve. Reach out for a free, no-obligation quote.</p>
+
+      <div class="contact-cards reveal">
+        <div class="contact-card">
+          <svg class="contact-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.79 19.79 19.79 0 01.48 2.18 2 2 0 012.46 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.5a16 16 0 006.59 6.59l.76-.76a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          <div class="contact-card-title">CALL US</div>
+          <div class="contact-card-sub">Available 24/7</div>
+        </div>
+        <div class="contact-card">
+          <svg class="contact-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div class="contact-card-title">EMAIL US</div>
+          <div class="contact-card-sub">Fast response time</div>
+        </div>
+        <div class="contact-card">
+          <svg class="contact-card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="contact-card-title">BASED IN</div>
+          <div class="contact-card-sub">Kentucky, USA</div>
         </div>
       </div>
-      <form class="contact-form" id="quoteForm" novalidate>
+
+      <!-- Quote form -->
+      <form class="quote-form reveal" id="quoteForm" novalidate>
         <div class="form-row">
           <div class="form-group">
             <label for="name">Full Name</label>
@@ -290,59 +341,72 @@
             <label for="service">Service Type</label>
             <select id="service" name="service">
               <option value="">Select a service</option>
-              <option>Air Freight</option>
-              <option>Ground Transport</option>
-              <option>Ocean Freight</option>
-              <option>Warehousing</option>
-              <option>Supply Chain Consulting</option>
+              <option>Full Truckload (FTL)</option>
+              <option>Less Than Truckload (LTL)</option>
+              <option>Logistics Coordination</option>
+              <option>Owner-Operator Partnership</option>
+              <option>Real-Time Tracking Setup</option>
+              <option>Compliance &amp; DOT Consulting</option>
             </select>
           </div>
         </div>
         <div class="form-group">
           <label for="message">Shipment Details</label>
-          <textarea id="message" name="message" rows="4" placeholder="Describe your shipment — origin, destination, weight, timeline..."></textarea>
+          <textarea id="message" name="message" rows="4" placeholder="Origin, destination, load type, weight, timeline..."></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-full">Send My Request</button>
-        <p class="form-note">No commitment required. We'll respond within one business day.</p>
+        <button type="submit" class="btn-primary btn-submit">Send My Request</button>
+        <p class="form-note">No commitment required. We respond same business day.</p>
       </form>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="#" class="logo">
-          <span class="logo-icon">&#9650;</span>
-          <span>Vidants<strong>Logistics</strong></span>
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand-wrap">
+        <a href="#" class="nav-logo footer-logo">
+          <div class="nav-hex">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 2 L44 13 L44 35 L24 46 L4 35 L4 13 Z" fill="#F26B1D"/>
+              <path d="M14 24 L20 18 L28 18 L28 30 L20 30 Z" fill="#0D1B2A"/>
+              <path d="M24 18 L34 24 L28 30" stroke="#0D1B2A" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <div>
+            <div class="nav-brand">VIDANTS <span>LOGISTICS</span></div>
+            <div class="nav-sub">LLC</div>
+          </div>
         </a>
-        <p>Reliable logistics solutions for businesses that demand precision, speed, and transparency.</p>
+        <div class="footer-tagline">Moving America Forward</div>
+        <p class="footer-blurb">Kentucky-based. Nationwide reach. Fully licensed, insured, and ready to roll.</p>
       </div>
       <div class="footer-links">
         <div class="footer-col">
-          <h4>Services</h4>
-          <a href="#services">Air Freight</a>
-          <a href="#services">Ground Transport</a>
-          <a href="#services">Ocean Freight</a>
-          <a href="#services">Warehousing</a>
+          <h5>Services</h5>
+          <a href="#services">Full Truckload (FTL)</a>
+          <a href="#services">Less Than Truckload</a>
+          <a href="#services">Logistics Coordination</a>
+          <a href="#services">Real-Time Tracking</a>
         </div>
         <div class="footer-col">
-          <h4>Company</h4>
-          <a href="#why-us">About Us</a>
-          <a href="#how-it-works">How It Works</a>
-          <a href="#testimonials">Testimonials</a>
+          <h5>Company</h5>
+          <a href="#why">About Us</a>
+          <a href="#process">How It Works</a>
           <a href="#contact">Contact</a>
+          <a href="#contact">Get a Quote</a>
         </div>
         <div class="footer-col">
-          <h4>Legal</h4>
+          <h5>Compliance</h5>
+          <a href="#">USDOT Licensed</a>
+          <a href="#">MC Authority</a>
+          <a href="#">Fully Insured</a>
           <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookie Policy</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Vidants Logistics. All rights reserved.</p>
+      <div class="footer-copy">&copy; 2026 <span>Vidants Logistics LLC</span>. All rights reserved. Kentucky, USA.</div>
+      <div class="footer-dot"></div>
     </div>
   </footer>
 
