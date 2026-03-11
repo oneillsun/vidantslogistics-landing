@@ -23,7 +23,18 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
+// Close menu on external click
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('nav')) {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+  }
+});
+
 // ── SCROLL REVEAL ────────────────────────────────────────────
+const isMobile = window.innerWidth <= 768;
+const revealThreshold = isMobile ? 0.08 : 0.12;
+
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -31,9 +42,17 @@ const revealObserver = new IntersectionObserver((entries) => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: revealThreshold });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Re-observe on window resize
+window.addEventListener('resize', () => {
+  const newIsMobile = window.innerWidth <= 768;
+  if (newIsMobile !== isMobile) {
+    location.reload();
+  }
+}, { passive: true });
 
 // ── QUOTE FORM ───────────────────────────────────────────────
 const form = document.getElementById('quoteForm');
@@ -51,7 +70,25 @@ if (form) {
       btn.style.background = '#16a34a';
       btn.style.opacity = '1';
       form.reset();
+      
+      // Reset after 3 seconds
+      setTimeout(() => {
+        btn.textContent = 'Send My Request';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 3000);
     }, 1400);
+  });
+  
+  // Prevent zoom on focus
+  const inputs = form.querySelectorAll('input, select, textarea');
+  inputs.forEach(input => {
+    input.addEventListener('focus', () => {
+      // Scroll into view smoothly
+      setTimeout(() => {
+        input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    });
   });
 }
 
@@ -59,6 +96,7 @@ if (form) {
 const sections  = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a');
 
+const sectionThreshold = isMobile ? 0.3 : 0.35;
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -67,6 +105,6 @@ const sectionObserver = new IntersectionObserver((entries) => {
       if (active) active.style.color = 'var(--orange)';
     }
   });
-}, { threshold: 0.35 });
+}, { threshold: sectionThreshold });
 
 sections.forEach(s => sectionObserver.observe(s));
