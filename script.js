@@ -55,6 +55,9 @@ window.addEventListener('resize', () => {
 }, { passive: true });
 
 // ── QUOTE FORM ───────────────────────────────────────────────
+// Initialize EmailJS (replace with your public key from emailjs.com)
+emailjs.init("d3ekT2VGtFH9nWD-D");
+
 const form = document.getElementById('quoteForm');
 if (form) {
   form.addEventListener('submit', (e) => {
@@ -64,8 +67,23 @@ if (form) {
     btn.disabled = true;
     btn.style.opacity = '0.7';
 
-    // Simulate submission — replace with real endpoint as needed
-    setTimeout(() => {
+    // Collect form data
+    const templateParams = {
+      to_email: 'info@vidantslogistics.com',
+      from_name: document.getElementById('name').value,
+      from_email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      message: document.getElementById('message').value,
+      reply_to: document.getElementById('email').value
+    };
+
+    // Send email via EmailJS
+    emailjs.send(
+      'service_uvgtohr',        // Replace with your service ID
+      'template_50o8o9s',       // Replace with your template ID
+      templateParams
+    )
+    .then(() => {
       btn.textContent = '✓ Request Sent — We\'ll be in touch soon!';
       btn.style.background = '#16a34a';
       btn.style.opacity = '1';
@@ -77,7 +95,20 @@ if (form) {
         btn.style.background = '';
         btn.disabled = false;
       }, 3000);
-    }, 1400);
+    })
+    .catch((error) => {
+      console.error('Email send failed:', error);
+      btn.textContent = 'Error sending request. Try again.';
+      btn.style.background = '#dc2626';
+      btn.style.opacity = '1';
+      btn.disabled = false;
+      
+      // Reset after 4 seconds
+      setTimeout(() => {
+        btn.textContent = 'Send My Request';
+        btn.style.background = '';
+      }, 4000);
+    });
   });
   
   // Prevent zoom on focus
