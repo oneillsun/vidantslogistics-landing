@@ -617,6 +617,9 @@ nav.scrolled {
   padding: 36px 24px;
   text-align: center;
   transition: background .3s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 .contact-card:hover { background: rgba(26,48,80,.8); }
 .contact-card-icon {
