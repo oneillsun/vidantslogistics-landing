@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Navy background square -->
+  <rect width="48" height="48" rx="8" fill="#0D1B2A"/>
+  <!-- Orange hexagon -->
+  <path d="M24 4 L41 13.5 L41 34.5 L24 44 L7 34.5 L7 13.5 Z" fill="#F26B1D"/>
+  <!-- Dark truck/V mark inside -->
+  <path d="M15 24 L20 18 L28 18 L28 30 L20 30 Z" fill="#0D1B2A"/>
+  <path d="M24 18 L33 24 L28 30" stroke="#0D1B2A" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
